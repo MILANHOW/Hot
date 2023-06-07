@@ -1,0 +1,96 @@
+script_key = CLJcFnESVFHOeqIHDuhXwbxsOprREdor
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/cd997d7bab60d01f04a0316009d8f797.lua"))()
+
+Settings = {
+
+    ["On Screen Trackers"] = true,
+
+    ["Performance"] = {
+
+        ["Disable 3D Rendering"] = false,
+
+        ["Diable Orb Rendering"] = true,
+
+        ["Disable Lootbags"] = true
+
+    },
+
+    ["Auto Collect"] = {
+
+        ["Orbs"] = true,
+
+        ["Lootbags"] = true
+
+    },
+
+    ["Auto Mailbox"] = {
+
+        ["Recipient"] = "YOUR USER HERE", -- Person To Send To
+
+        ["Min Dias"] = 100000000, -- Minumum Gems
+
+        ["Enabled"] = false
+
+    },
+
+    ["Multipliers"] = {
+
+        ["Giant Chest"] = 0,
+
+        ["Chest"] = 0,
+
+        ["Small Chest"] = 9,
+
+        ["Vault"] = 0,
+
+        ["Safe"] = 0,
+
+        ["Present"] = 7
+
+    },
+
+    ["Webhooks"] = {
+
+        ["Server Hop Webhook"] = "",
+
+        ["Time Frame Webhook"] = "",
+
+        ["Timeframe"] = 300 -- Seconds
+
+    },
+
+    ["Pet Team"] = {
+
+        ["Mode"] = "Best", -- Best Or Manual: Best = Highest Power, Manual = All Pets With A Certain Nickname
+
+        ["Nickname"] = "Mystic Mine"
+
+    },
+
+    ["Fruit"] = {
+
+        ["Farm Fruit If Low"] = false,
+
+        ["Min Fruit"] = 100, -- Starts Farming If Below This
+
+        ["Max Fruit"] = 150, -- Stops Farming Once Above This
+
+        ["Mode"] = "Pixel Vault" -- Pixel Vault or Server Hop
+
+    },
+
+    ["Boosts"] = {
+
+        ["Triple Damage"] = true,
+
+        ["Server Damage"] = true
+
+    }
+
+}
+
+local Http = game:GetService("HttpService")
+
+writefile("v4config.txt", Http:JSONEncode(Settings))
+
